@@ -74,7 +74,7 @@ const styles = {
   },
 };
 
-const DashboardPage: React.FC = () => {
+const DashboardPage: React.FC = (token: any) => {
   const data = [
     {
       name: "Lead 1",

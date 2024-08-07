@@ -117,14 +117,14 @@ const LoginPage: React.FC = () => {
     //   alert("Please complete the CAPTCHA");
     //   return;
     // }
-
+    const email = username;
     try {
-      const response = await fetch("http://19.168.1.36:8080/user/login", {
+      const response = await fetch("http://localhost:8080/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ email, password }),
       });
 
       if (response.ok) {
